@@ -1,5 +1,5 @@
 # Megafund
 
-## Help dreams come true
+## Help make dreams come true
 
 Under construction...
