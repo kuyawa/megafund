@@ -1,95 +1,169 @@
-import Image from 'next/image'
+//import Image from 'next/image'
+import Page from '@/components/page'
+import ButtonFund from '@/components/button-fund'
 import styles from './page.module.css'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <Page>
+      <div className={styles.hero}>
+        <h1>Do you have a dream?</h1>
+        <h3>Let the world make your ideas come true</h3>
+        <a className={styles.start} href="/start">START YOUR DREAM FOR FREE</a>
+        <h2>Are you a dream maker?</h2>
+        <h3>Help people around the world reach their goals</h3>
+        <h3>Donate to the causes next to your heart... or town</h3>
+      </div>
+      <div className={styles.panel}>
+        <h1>Recent dreams</h1>
+        <div className={styles.cards}>
+          <div className={styles.card}>
+            <a href="/view/0001"><img src="media/fund1.jpg" /></a>
+            <h1>Ptechnodactylus</h1>
+            <p>Description of the project, goals, roadmap, perks and everything that makes the idea appealing to investors</p>
+            <div className={styles.goal}>Dream goal $100,000</div>
+            <progress value="23" max="100" />
+            <div className={styles.fund}>23% funded - since Oct 2023</div>
+            <ButtonFund cause="0xB9dE738497f2770A3b9c2Edc4F49FA03708C326e" />
+          </div>
+          <div className={styles.card}>
+            <a href="/view/0002"><img src="media/fund2.jpg" /></a>
+            <h1>Jack in the box</h1>
+            <p>Description of the project, goals, roadmap, perks and everything that makes the idea appealing to investors</p>
+            <div className={styles.goal}>Dream goal $250,000</div>
+            <progress value="31" max="100" />
+            <div className={styles.fund}>31% funded - since Jan 2023</div>
+            <ButtonFund cause="0xB9dE738497f2770A3b9c2Edc4F49FA03708C326e" />
+          </div>
+          <div className={styles.card}>
+            <a href="/view/0003"><img src="media/fund3.png" /></a>
+            <h1>Smart bag</h1>
+            <p>Description of the project, goals, roadmap, perks and everything that makes the idea appealing to investors</p>
+            <div className={styles.goal}>Dream goal $75,000</div>
+            <progress value="54" max="100" />
+            <div className={styles.fund}>54% funded - since May 2023</div>
+            <ButtonFund cause="0xB9dE738497f2770A3b9c2Edc4F49FA03708C326e" />
+          </div>
+          <div className={styles.card}>
+            <a href="/view/0004"><img src="media/fund4.png" /></a>
+            <h1>Smart Belt</h1>
+            <p>Description of the project, goals, roadmap, perks and everything that makes the idea appealing to investors</p>
+            <div className={styles.goal}>Dream goal $50,000</div>
+            <progress value="28" max="100" />
+            <div className={styles.fund}>28% funded - since Sep 2023</div>
+            <ButtonFund cause="0xB9dE738497f2770A3b9c2Edc4F49FA03708C326e" />
+          </div>
+          <div className={styles.card}>
+            <a href="/view/0005"><img src="media/fund5.jpg" /></a>
+            <h1>Pet Dragon</h1>
+            <p>Description of the project, goals, roadmap, perks and everything that makes the idea appealing to investors</p>
+            <div className={styles.goal}>Dream goal $345,000</div>
+            <progress value="12" max="100" />
+            <div className={styles.fund}>12% funded - since Aug 2023</div>
+            <ButtonFund cause="0xB9dE738497f2770A3b9c2Edc4F49FA03708C326e" />
+          </div>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className={styles.panel}>
+        <h1>Most funded</h1>
+        <div className={styles.cards}>
+          <div className={styles.card}>
+            <a href="/view/0002"><img src="media/fund2.jpg" /></a>
+            <h1>Jack in the box</h1>
+            <p>Description of the project, goals, roadmap, perks and everything that makes the idea appealing to investors</p>
+            <div className={styles.goal}>Dream goal $250,000</div>
+            <progress value="31" max="100" />
+            <div className={styles.fund}>31% funded - since Jan 2023</div>
+            <ButtonFund cause="0xB9dE738497f2770A3b9c2Edc4F49FA03708C326e" />
+          </div>
+          <div className={styles.card}>
+            <a href="/view/0005"><img src="media/fund5.jpg" /></a>
+            <h1>Pet Dragon</h1>
+            <p>Description of the project, goals, roadmap, perks and everything that makes the idea appealing to investors</p>
+            <div className={styles.goal}>Dream goal $345,000</div>
+            <progress value="12" max="100" />
+            <div className={styles.fund}>12% funded - since Aug 2023</div>
+            <ButtonFund cause="0xB9dE738497f2770A3b9c2Edc4F49FA03708C326e" />
+          </div>
+          <div className={styles.card}>
+            <a href="/view/0001"><img src="media/fund1.jpg" /></a>
+            <h1>Ptechnodactylus</h1>
+            <p>Description of the project, goals, roadmap, perks and everything that makes the idea appealing to investors</p>
+            <div className={styles.goal}>Dream goal $100,000</div>
+            <progress value="23" max="100" />
+            <div className={styles.fund}>23% funded - since Oct 2023</div>
+            <ButtonFund cause="0xB9dE738497f2770A3b9c2Edc4F49FA03708C326e" />
+          </div>
+          <div className={styles.card}>
+            <a href="/view/0004"><img src="media/fund4.png" /></a>
+            <h1>Smart Belt</h1>
+            <p>Description of the project, goals, roadmap, perks and everything that makes the idea appealing to investors</p>
+            <div className={styles.goal}>Dream goal $50,000</div>
+            <progress value="28" max="100" />
+            <div className={styles.fund}>28% funded - since Sep 2023</div>
+            <ButtonFund cause="0xB9dE738497f2770A3b9c2Edc4F49FA03708C326e" />
+          </div>
+          <div className={styles.card}>
+            <a href="/view/0003"><img src="media/fund3.png" /></a>
+            <h1>Smart bag</h1>
+            <p>Description of the project, goals, roadmap, perks and everything that makes the idea appealing to investors</p>
+            <div className={styles.goal}>Dream goal $75,000</div>
+            <progress value="54" max="100" />
+            <div className={styles.fund}>54% funded - since May 2023</div>
+            <ButtonFund cause="0xB9dE738497f2770A3b9c2Edc4F49FA03708C326e" />
+          </div>
+        </div>
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className={styles.panel}>
+        <h1>In your region</h1>
+        <div className={styles.cards}>
+          <div className={styles.card}>
+            <a href="/view/0005"><img src="media/fund5.jpg" /></a>
+            <h1>Pet Dragon</h1>
+            <p>Description of the project, goals, roadmap, perks and everything that makes the idea appealing to investors</p>
+            <div className={styles.goal}>Dream goal $345,000</div>
+            <progress value="12" max="100" />
+            <div className={styles.fund}>12% funded - since Aug 2023</div>
+            <ButtonFund cause="0xB9dE738497f2770A3b9c2Edc4F49FA03708C326e" />
+          </div>
+          <div className={styles.card}>
+            <a href="/view/0003"><img src="media/fund3.png" /></a>
+            <h1>Smart bag</h1>
+            <p>Description of the project, goals, roadmap, perks and everything that makes the idea appealing to investors</p>
+            <div className={styles.goal}>Dream goal $75,000</div>
+            <progress value="54" max="100" />
+            <div className={styles.fund}>54% funded - since May 2023</div>
+            <ButtonFund cause="0xB9dE738497f2770A3b9c2Edc4F49FA03708C326e" />
+          </div>
+          <div className={styles.card}>
+            <a href="/view/0004"><img src="media/fund4.png" /></a>
+            <h1>Smart Belt</h1>
+            <p>Description of the project, goals, roadmap, perks and everything that makes the idea appealing to investors</p>
+            <div className={styles.goal}>Dream goal $50,000</div>
+            <progress value="28" max="100" />
+            <div className={styles.fund}>28% funded - since Sep 2023</div>
+            <ButtonFund cause="0xB9dE738497f2770A3b9c2Edc4F49FA03708C326e" />
+          </div>
+          <div className={styles.card}>
+            <a href="/view/0002"><img src="media/fund2.jpg" /></a>
+            <h1>Jack in the box</h1>
+            <p>Description of the project, goals, roadmap, perks and everything that makes the idea appealing to investors</p>
+            <div className={styles.goal}>Dream goal $250,000</div>
+            <progress value="31" max="100" />
+            <div className={styles.fund}>31% funded - since Jan 2023</div>
+            <ButtonFund cause="0xB9dE738497f2770A3b9c2Edc4F49FA03708C326e" />
+          </div>
+          <div className={styles.card}>
+            <a href="/view/0001"><img src="media/fund1.jpg" /></a>
+            <h1>Ptechnodactylus</h1>
+            <p>Description of the project, goals, roadmap, perks and everything that makes the idea appealing to investors</p>
+            <div className={styles.goal}>Dream goal $100,000</div>
+            <progress value="23" max="100" />
+            <div className={styles.fund}>23% funded - since Oct 2023</div>
+            <ButtonFund cause="0xB9dE738497f2770A3b9c2Edc4F49FA03708C326e" />
+          </div>
+        </div>
       </div>
-    </main>
+    </Page>
   )
 }
